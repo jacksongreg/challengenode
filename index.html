@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Conservation </title>
+    <link rel="stylesheet" type="text/css" href="/css/water.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+  </head>
+  <body>
+  <header>
+    <img class="water" src="/images/water.png" alt="water">
+  </header>
+  <h1>Volunteer Signup Sheet</h1>
+    <section>
+     <div class="col-6a">
+       <img class="world" src="/images/droplets.jpg" alt="world">
+
+     </div>
+
+     <div class="col-6b">
+       <h2>Application Form</h2>
+       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aquila.</p>
+       <form class="cmxform" id="form" method="post" action="/addname">
+         <label for="fname"></label>
+         <input id="fname" type="text" name="fname" minlength="4" value="First name" required><br>
+         <label for="lname"></label>
+         <input id="lname" type="text" name="lname" minlength="4" value="Last name" required><br>
+         <label for="email"></label>
+         <input id="email" type="email" name="email" value="Email address" required><br>
+         <input id="submit" type="submit" value="Sign up"><br>
+       </form>
+       <a href="url">Terms and conditions</a>
+       <div class="id">
+
+       </div>
+     </div>
+
+    </section>
+
+  </body>
+  <script type="text/javascript">
+    $("#commentform").validate({wrapper: "li"});
+  </script>
+</html>
