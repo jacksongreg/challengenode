@@ -1,8 +1,13 @@
 $(document).ready(function(){
+
+  $("#form").validate({wrapper: "li",
+    submitHandler: function(form) { DoSubmit()
+  }});
+
   var myObj;
- $("#submit").click(function(e){
+ $("#submit").submit(function(e){
   e.preventDefault();
-  setTimeout(function(){window.location.reload(true);},100);
+  setTimeout(function(){window.location.reload(true);},1000);
   var fname = $("#fname").val();
   var lname = $("#lname").val();
   var email = $("#email").val();
@@ -14,20 +19,18 @@ $(document).ready(function(){
     }
   else
   {
-// AJAX Code To Submit Form.
+
+function doSubmit(){
    $.ajax({
    type: "POST",
    url: "http://localhost:3000/addname",
    data: dataString,
    cache: false,
    success: function(result){
-   // myObj = JSON.parse(result);
-
-   // $( ".id" ).append( "<p>The ID of the submitted record is " + myObj.inserted_id + "</p>" );
 
   }
    });
-
+ }
   }
  });
 });
