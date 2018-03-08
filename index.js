@@ -32,6 +32,7 @@ app.post("/addname", (req, res) => {
     myData.save()
         .then(item => {
             res.send("Name saved to database");
+            res.redirect('back');
         })
         .catch(err => {
             res.status(400).send("Unable to save to database");
